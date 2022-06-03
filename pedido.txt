@@ -1,15 +1,15 @@
 Criar tela de cadastro de pessoa Fisica/Juridica
 
 - Conter os campos
---- Nome
+--- Nome   ok 
 --- CPF/CNPJ
 --- Endereço: (Cep, Logradouro, Cidade (Texto), Estado(Combo), Bairro, Número)
---- Email
---- Senha
---- Telefone (não precisa de mascara)
+--- Email ok
+--- Senha ok
+--- Telefone (não precisa de mascara) ok
 --- Opiniões (textarea)
---- Sexo - M/F/O (text=radio)
---- Aceitar os termos (checkbox)
---- Data de nascimento
+--- Sexo - M/F/O (text=radio) ok
+--- Aceitar os termos (checkbox) ok
+--- Data de nascimento ok 
 - Desafio: Usar bootstrap 5.x
 - Não pode usar CSS customizado, ou seja, usar tudo do bootstrap.
