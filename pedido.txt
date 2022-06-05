@@ -3,11 +3,11 @@ Criar tela de cadastro de pessoa Fisica/Juridica
 - Conter os campos
 --- Nome   ok 
 --- CPF/CNPJ
---- Endereço: (Cep, Logradouro, Cidade (Texto), Estado(Combo), Bairro, Número)
+--- Endereço: (Cep, Logradouro, Cidade (Texto), Estado(Combo), Bairro, Número)ok
 --- Email ok
 --- Senha ok
 --- Telefone (não precisa de mascara) ok
---- Opiniões (textarea)
+--- Opiniões (textarea) ok
 --- Sexo - M/F/O (text=radio) ok
 --- Aceitar os termos (checkbox) ok
 --- Data de nascimento ok 
