@@ -13,3 +13,5 @@ Criar tela de cadastro de pessoa Fisica/Juridica
 --- Data de nascimento ok 
 - Desafio: Usar bootstrap 5.x
 - Não pode usar CSS customizado, ou seja, usar tudo do bootstrap.
+
+--- ajax é um elemento que me permite alterar em tempo real algum componente do meu documento HTML
