@@ -1,133 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="script.js"></script>   
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <script src="script.js"></script>
     <title>Formulario de Cadastro</title>
-    </head>
-    <body class="bg-color">
-        <div class="container-fluid h-100">
-            <div class="row form-cadastro justify-content-center">
-                <div class="col-3 aling-self-center area-form border">
-        <div class="row justify-content-center mb-4">
-          <img src="/Formulario/img/logo.jpg" class="rounded-circle" alt="logo ui">  
-        </div>
-        <span class="small d-block text-center"> Cadastre com sua conta <button type="button" class="btn btn-secondary">Google</button></span>
+</head>
 
-        
-
-        <form action="">
-            <div class="input-goup mt-2">
-                <label >Nome completo*</label>
-                <input type="text" class="form-control bg-light btn-outline-secondary" placeholder="nome completo">
-            </div>
-            <div class="input-goup mt-2">
-                <label >Email*</label>
-                <input type="email" class="form-control bg-light btn-outline-secondary" placeholder="Email">
-            </div>
-            <div class="input-goup mt-2">
-                <label >Login*</label>
-                <input type="text" class="form-control bg-light btn-outline-secondary" placeholder="Login">
-            </div>
-            <div class="input-goup mt-2">
-                <label >Senha*</label>
-                <input type="password" class="form-control bg-light btn-outline-secondary" placeholder="*******">
-            </div>
-            <div class="input-goup mt-2">
-                <label >Repita a senha*</label>
-                <input type="password" class="form-control bg-light btn-outline-secondary" placeholder="*******">
-            </div>
-            <div class="input-goup mt-2">
-                <label >Data de Nascimento*</label>
-                <input type="date" class="form-control bg-light btn-outline-secondary "   >
-            </div>
-            <div class="input-goup mt-2">
-                <label>TELEFONE*</label>
-                <input type="tel" class="form-control bg-light btn-outline-secondary" pattern="[0-9]{2}[9]{1}[0-9]{4}[0-9]{4}" placeholder="(xx)9xxxx-xxxx">
-            </div>
-            <div class="input-goup mt-2">
-                <label>Sexo: </label>
-                <input  class="form-check-input" type="radio" name="SexoRadios" id="Sexo" value="Masculino"> Masc.
-                <input  class="form-check-input" type="radio" name="SexoRadios" id="Sexo" value="Feminino"> Fem.
-                <input  class="form-check-input" type="radio" name="SexoRadios" id="Sexo" value="Outro"> Out.
-            </div>
-
-<!-- INFORMAÇÕES SOBRE O ENDEREÇO -->
-
-            <div class="input-goup mt-2">
-                <div class="form-group col-md-6">
-                    <label >CEP:</label>
-                    <input type="name" class="form-control" name="cep" id="cep" pattern="[0-9]{8}" placeholder="00000-000">  
+<body class="bg-color">
+    <div class="container-fluid h-100">
+        <div class="row form-cadastro justify-content-center">
+            <div class="col-4 aling-self-center area-form border">
+                <div class="row justify-content-center mb-4">
+                    <img src="/Formulario/img/logo.jpg" class="rounded-circle" alt="logo ui" />
                 </div>
-                <label for="inputAddress">Endereço</label>
-                <input type="text" class="form-control col-8" placeholder="Logragouro" id="logradouro" readonly>
-              </div>
-              <div class="col-md-2">
-                <label for="inputZip">Numero:</label>
-                <input type="number" class="form-control" id="numero" name="numero" required>
-                </div>
-                <div>
-                  <label for="inputAddress">Complemento</label>
-                  <input type="text" class="form-control" id="Complemento" name="Complemento"  placeholder="Complemento">
-                </div>
-              <div class="input-goup mt-2">
-                <div class="form-group col-md-6">
-                  <label for="inputCity">Cidade</label>
-                  <input class="form-control " type="text" name="Cidade" id="cidade" placeholder="Cidade" readonly>
-                </div>
-                <div class="input-goup mt-2">
-                    <div class="form-group col-md-6">
-                      <label for="inputCity">Bairro</label>
-                      <input type="text" class="form-control " placeholder="Bairro" id="bairro" readonly>
+                <span class="small d-block text-center">
+                    Cadastre com sua conta
+                    <button type="button" class="btn">
+                        <b> Google</b>
+                    </button></span>
+                <form>
+                    <div class="input-goup mt-2">
+                        <label>Nome completo*</label>
+                        <input type="text" class="form-control bg-light btn-outline-secondary"
+                            placeholder="nome completo" />
                     </div>
-                <div class="form-group col-md-4">
-                  <label for="inputState">Estado:</label>
-                  <input class="form-control " type="text" id="uf"  placeholder="UF" readonly>
-                </div>
-              </div>
+                    <div class="input-goup mt-2">
+                        <label>Email*</label>
+                        <input type="email" class="form-control bg-light btn-outline-secondary" placeholder="Email" />
+                    </div>
+                    <div class="input-goup mt-2">
+                        <label>Login*</label>
+                        <input type="text" class="form-control bg-light btn-outline-secondary" placeholder="Login" />
+                    </div>
+                    <div class="input-goup mt-2">
+                        <label>Senha*</label>
+                        <input type="password" class="form-control bg-light btn-outline-secondary"
+                            placeholder="*******" />
+                    </div>
+                    <div class="input-goup mt-2">
+                        <label>Repita a senha*</label>
+                        <input type="password" class="form-control bg-light btn-outline-secondary"
+                            placeholder="*******" />
+                    </div>
+                    <div class="input-goup mt-2">
+                        <label>Data de Nascimento*</label>
+                        <input type="date" class="form-control bg-light btn-outline-secondary" />
+                    </div>
+                    <div class="input-goup mt-2">
+                        <label>TELEFONE*</label>
+                        <input type="tel" class="form-control bg-light btn-outline-secondary"
+                            pattern="[0-9]{2}[9]{1}[0-9]{4}[0-9]{4}" placeholder="(xx)9xxxx-xxxx" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="sexo">Sexo</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="masculino" value="M" />
+                                <label class="form-check-label" for="masculino">Masculino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="feminino" value="F" />
+                                <label class="form-check-label" for="feminino">Feminino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="outro" value="O" />
+                                <label class="form-check-label" for="outro">Prefiro não informar</label>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="form-group input-goup mt-2">
-                <label class="" for="">Deixe sua opinião conosco!</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            
-            <div class="form-check form-check-inline input-goup mt-2">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1" required>Li e aceito os termos e condições</label>
-            </div>
+                    <!-- INFORMAÇÕES SOBRE O ENDEREÇO -->
 
-            <div class="row input-goup mt-2">
-                <div class="col-md-6">
-                    <button  type="submit" class="btn btn-info btn-block">CADASTRAR</button>
-                </div>
-                <div class="col-md-6">
-                    <button type="reset" class="btn btn-secondary btn-block ">LIMPAR</button>
-                </div>
-            </div>
-        </form>
+                    <div class="form-group mb-3">
+                        <label for="cep">CEP</label>
+                        <input type="text" name="cep" class="form-control" id="cep" placeholder="________"
+                            maxlength="8" />
+                    </div>
 
-        <button type="button" class="btn btn-default btn-block mt2">Já tenho conta!</button>
+                    <div class="form-group mb-3">
+                        <label for="logradouro">Logradouro</label>
+                        <input type="text" name="logradouro" class="form-control" id="logradouro"
+                            placeholder="Logradouro" readonly />
+                    </div>
 
+                    <div class="form-group mb-3">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Cidade"
+                            readonly />
+                    </div>
 
+                    <div class="form-group mb-3">
+                        <label for="estado">Estado</label>
+                        <select id="uf" class="form-control form-select" required readonly>
+                            <option selected>Escolher...</option>
+                            <option value="MG">MG</option>
+                            <option value="DF">DF</option>
+                            <option value="SP">SP</option>
+                            <option value="GO">GO</option>
+                            <option value="RR">RR</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="AC">AC</option>
+                            <option value="RO">RO</option>
+                            <option value="TO">TO</option>
+                            <option value="MA">MA</option>
+                            <option value="PI">PI</option>
+                            <option value="CE">CE</option>
+                            <option value="RN">RN</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="AL">AL</option>
+                            <option value="SE">SE</option>
+                            <option value="BA">BA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="ES">ES</option>
+                            <option value="RJ">RJ</option>
+                            <option value="PR">PR</option>
+                            <option value="SC">SC</option>
+                            <option value="RS">RS</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group mb-3">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro"
+                            readonly />
+                    </div>
 
-                </div>
+                    <div class="form-group mb-3">
+                        <label for="numero">Número</label>
+                        <input type="number" name="numero" class="form-control" id="numero" placeholder="Número" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" name="complemento" class="form-control" id="complemento"
+                            placeholder="complemento" />
+                    </div>
+
+                    <div class="form-group input-goup mt-2">
+                        <label for="opiniao">Deixe sua opinião conosco!</label>
+                        <textarea class="form-control" id="opiniao" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-check form-check-inline input-goup mt-2">
+                        <input class="form-check-input" type="checkbox" id="termos" value="option1" required />
+                        <label class="form-check-label" for="termos">Li e aceito os termos e condições</label>
+                    </div>
+
+                    <div class="row input-goup mt-2">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-info btn-block">
+                                CADASTRAR
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-secondary btn-block">
+                                VOLTAR
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="reset" class="btn btn-secondary btn-block">
+                                 LIMPAR
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <button type="button" class="btn btn-default btn-block mt2">
+                    <b> Já tenho conta! </b>
+                </button>
             </div>
         </div>
-        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script type="text/javascript">
-       
-    
-        
-        //console.log(micael(10,10,20))
-        </script>
-        <script src="js/app.js"></script>
-    </body>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      //console.log(micael(10,10,20))
+    </script>
+    <script src="js/app.js"></script>
+</body>
+
 </html>
