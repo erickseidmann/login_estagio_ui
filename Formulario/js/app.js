@@ -56,6 +56,7 @@ form.addEventListener('submit', (evente) => {
     const email = document.getElementById('email')
     const cpf = document.getElementById('cpf')
     const cnpj = document.getElementById('cnpj')
+    const cep = document.getElementById('cep')
     const telefone = document.getElementById('telefone')
     const termos = document.getElementById('termos')
 
@@ -72,6 +73,12 @@ form.addEventListener('submit', (evente) => {
         cpf.focus()
     }else{
         cpf.classList.remove("errorInput")
+    }
+    if (cep.value == "") {
+        cep.classList.add("errorInput");
+        cep.focus()
+    }else{
+        cep.classList.remove("errorInput")
     }
     if (cnpj.value == "") {
         cnpj.classList.add("errorInput");
@@ -132,7 +139,7 @@ function validarCPF(strCPF){
     return true
 }
 
-// mascara cpf e cnpj 
+// mascara cpf, telefone, cnpj e cep
 
 function mascara_cpf(){
     var cpf = document.getElementById("cpf")
@@ -155,4 +162,11 @@ function mascara_cnpj(){
         cnpj.value += "-"
     }
 }
+function mascara_cep(){
+    var cep = document.getElementById("cep")
+    if (cep.value.length == 5){
+        cep.value += "-"
+    } 
+}
+$("#telefone").mask("(99)99999-9999")
 
