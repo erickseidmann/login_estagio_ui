@@ -25,7 +25,7 @@
                     <button type="button" class="btn">
                         <b> Google</b>
                     </button></span>
-                <form>
+                <form class="form" id="form">
 
                     <div class="row input-goup mt-1">
                         <div class="col-md-6 ">
@@ -42,14 +42,13 @@
 
                     <div id="pf" class="input-goup mt-2">
                         <label>Nome</label>
-                        <input type="text" class="form-control bg-light btn-outline-secondary"
-                            placeholder="ex: João" />
+                        <input type="text" class="form-control bg-light btn-outline-secondary" placeholder="ex: João" />
                         <label>Sobrenome</label>
                         <input type="text" class="form-control bg-light btn-outline-secondary"
                             placeholder="ex: fulano de tal" />
                         <label>CPF*</label>
-                        <input type="number" class="form-control bg-light btn-outline-secondary"
-                            placeholder="_________-__" required/>
+                        <input id="cpf" type="text" class="form-control bg-light btn-outline-secondary"
+                            placeholder="___.___.___-__" maxlength="14" autocomplete="off" onkeyup="mascara_cpf()"/>
                     </div>
                     <div id="pj" class="input-goup mt-2">
                         <label>Razão Social</label>
@@ -57,12 +56,12 @@
                         <label>Nome Fantasia</label>
                         <input type="text" class="form-control bg-light btn-outline-secondary" />
                         <label>CNPJ*</label>
-                        <input type="number" class="form-control bg-light btn-outline-secondary"
-                            placeholder="_________-__" required/>
+                        <input id="cnpj" type="text" class="form-control bg-light btn-outline-secondary"
+                            placeholder="__.___.___/____-__" maxlength="18" autocomplete="off" onkeyup="mascara_cnpj()" />
                     </div>
                     <div class="input-goup mt-2">
                         <label>Email*</label>
-                        <input type="email" class="form-control bg-light btn-outline-secondary" placeholder="Email" />
+                        <input type="email" id="email" class="form-control bg-light btn-outline-secondary"/>
                     </div>
                     <div class="input-goup mt-2">
                         <label>Login*</label>
@@ -84,7 +83,7 @@
                     </div>
                     <div class="input-goup mt-2">
                         <label>TELEFONE*</label>
-                        <input type="tel" class="form-control bg-light btn-outline-secondary"
+                        <input type="tel" id="telefone" class="form-control bg-light btn-outline-secondary"
                             pattern="[0-9]{2}[9]{1}[0-9]{4}[0-9]{4}" placeholder="(xx)9xxxx-xxxx" />
                     </div>
                     <div class="form-group mb-3">
@@ -127,7 +126,7 @@
 
                     <div class="form-group mb-3">
                         <label for="estado">Estado</label>
-                        <select id="uf" class="form-control form-select" required readonly>
+                        <select id="uf" class="form-control form-select" readonly>
                             <option selected>Escolher...</option>
                             <option value="MG">MG</option>
                             <option value="DF">DF</option>
@@ -180,13 +179,14 @@
                     </div>
 
                     <div class="form-check form-check-inline input-goup mt-2">
-                        <input class="form-check-input" type="checkbox" id="termos" value="option1" required />
                         <label class="form-check-label" for="termos">Li e aceito os termos e condições</label>
+                        <input class="form-check-input" type="checkbox" id="termos" value="option1" required />
+                    
                     </div>
 
                     <div class="row input-goup mt-2">
                         <div class="col-md-4">
-                            <button type="submit" class="btn btn-info btn-block">
+                            <button id="btncadastrar" type="submit" class="btn btn-info btn-block">
                                 CADASTRAR
                             </button>
                         </div>

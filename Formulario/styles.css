@@ -5,3 +5,7 @@
 #pj {
     display: none;
 }
+
+.errorInput{
+    border: 2px solid rgb(231, 58, 58) !important;
+}
