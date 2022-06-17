@@ -19,3 +19,29 @@ $("#cep").on("change", function(){
 
    
 })
+
+/* Para escolher PJ ou PF */
+
+var btn = document.querySelector('#pfbtn');
+var pf = document.querySelector("#pf");
+
+btn.addEventListener('click', function(){
+
+    if(pf.style.display === "block"){
+        pf.style.display = 'none';
+    } else {
+        pf.style.display = 'block';
+    }
+})
+
+var btn = document.querySelector('#pjbtn');
+var pj = document.querySelector("#pj");
+
+btn.addEventListener('click', function(){
+
+    if(pj.style.display === "block"){
+        pj.style.display = 'none';
+    } else {
+        pj.style.display = 'block';
+    }
+})
