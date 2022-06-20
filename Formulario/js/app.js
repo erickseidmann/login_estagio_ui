@@ -60,8 +60,6 @@ form.addEventListener('submit', (evente) => {
     const telefone = document.getElementById('telefone')
     const termos = document.getElementById('termos')
 
-
-
     if (email.value == "") {
         email.classList.add("errorInput");
         email.focus()
@@ -92,18 +90,13 @@ form.addEventListener('submit', (evente) => {
     }else{
         telefone.classList.remove("errorInput")
     }
-    if (termos.value == false) {
+    if (termos.value != checked) {
         termos.classList.add("errorInput");
         termos.focus()
     }else{
         termos.classList.remove("errorInput")
     }
-   // if((cpf.value.length === 11) && (validarCPF(cpf)) ){
-   //     cpf.classList.add("errorInput");
-   //     cpf.focus()
-   // }else{
-   //     cpf.classList.remove("errorInput")
-    //}
+
     if(email.value.indexOf("@")==-1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf('@')==1)){
         email.classList.add("errorInput")
         email.focus()
@@ -112,35 +105,7 @@ form.addEventListener('submit', (evente) => {
     }
 
 })
-
-// função para validar o cpf
-
-function validarCPF(strCPF){
-    var soma;
-    var resto;
-    soma = 0;
-    if(strCPF === "00000000000")
-        return false;
-    for (i = 1; i<= 9; i++)
-        soma = soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
-    resto = (soma * 10) % 11;
-    if ((resto == 10 ) || (resto == 11))
-        resto = 0;
-    if (resto != parseInt(strCPF.substring(9, 10)))
-        return false;
-    soma = 0;
-    for (i = 1; i<= 10; i++)
-        soma = soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
-    resto = (soma* 10) % 11;
-    if ((resto == 10) || (resto == 11))
-        resto = 0;
-    if (resto != parseInt (strCPF.substring(10,11)))
-        return false;
-    return true
-}
-
 // mascara cpf, telefone, cnpj e cep
-
 function mascara_cpf(){
     var cpf = document.getElementById("cpf")
     if (cpf.value.length == 3 || cpf.value.length == 7){
@@ -168,5 +133,45 @@ function mascara_cep(){
         cep.value += "-"
     } 
 }
-$("#telefone").mask("(99)99999-9999")
+function mascara_telefone(){
+    var telefone = document.getElementById("telefone")
+    if (telefone.value.length == 0 || telefone.value.length == 1){
+        telefone.value += "("
+    }else if (telefone.value.length == 3){
+        telefone.value += ")"
+    }else if (telefone.value.length == 9){
+        telefone.value += "-"
+    }  
+}
 
+// validador do cpf 
+function TestaCPF(strCPF) {
+    var Soma;
+    var Resto;
+    Soma = 0;
+  if (strCPF == "00000000000") return false;
+
+  for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+  Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11))  Resto = 0;
+    if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
+
+  Soma = 0;
+    for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+    Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11))  Resto = 0;
+    if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
+    return true;
+}
+var strCPF = document.getElementById('cpf');
+var cpf = strCPF;
+
+if (cpf.value == false) {
+    cpf.classList.add("errorInput");
+    cpf.focus()
+}else{
+    cpf.classList.remove("errorInput")
+}
+   
