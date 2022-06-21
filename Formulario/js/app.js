@@ -105,8 +105,8 @@ form.addEventListener('submit', (evente) => {
     }
 
 })
-// mascara cpf, telefone, cnpj e cep
-function mascara_cpf(){
+// mascara cpf, telefone, cnpj e cep usando js puro
+/*function mascara_cpf(){
     var cpf = document.getElementById("cpf")
     if (cpf.value.length == 3 || cpf.value.length == 7){
         cpf.value += "."
@@ -142,7 +142,15 @@ function mascara_telefone(){
     }else if (telefone.value.length == 9){
         telefone.value += "-"
     }  
-}
+}*/
+// mascara cpf, telefone, cnpj e cep usando jquery
+$(document).ready(function(){
+    $("#cep").mask('00.000-000');
+    $("#tele").mask('(00)00000-0000');
+    $("#cpf").mask('000.000.000-00');
+    $("#cnpj").mask('00.000.000/0000-00')
+})
+
 
 // validador do cpf 
 function TestaCPF(strCPF) {
