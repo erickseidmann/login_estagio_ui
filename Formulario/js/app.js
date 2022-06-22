@@ -1,7 +1,8 @@
 $("#cep").on("change", function () {
-    var numCep = $("#cep").val();
+    
+    var numCep = $("#cep").val().toString().replace(/-/, '').replace('.', '');
     var url = "https://viacep.com.br/ws/" + numCep + "/json";
-
+    
     $.ajax({
         url: url,
         type: "get",
@@ -29,6 +30,8 @@ btn.addEventListener('click', function () {
 
     if (pf.style.display === "block") {
         pf.style.display = 'none';
+    } else if (pj === true){
+        pf.style.display = 'block';
     } else {
         pf.style.display = 'block';
     }
@@ -57,50 +60,50 @@ form.addEventListener('submit', (evente) => {
     const cpf = document.getElementById('cpf')
     const cnpj = document.getElementById('cnpj')
     const cep = document.getElementById('cep')
-    const telefone = document.getElementById('telefone')
+    const telefone = document.getElementById('tele')
     const termos = document.getElementById('termos')
 
     if (email.value == "") {
         email.classList.add("errorInput");
         email.focus()
-    }else{
+    } else {
         email.classList.remove("errorInput")
-    } 
+    }
     if (cpf.value == "") {
         cpf.classList.add("errorInput");
         cpf.focus()
-    }else{
+    } else {
         cpf.classList.remove("errorInput")
     }
     if (cep.value == "") {
         cep.classList.add("errorInput");
         cep.focus()
-    }else{
+    } else {
         cep.classList.remove("errorInput")
     }
     if (cnpj.value == "") {
         cnpj.classList.add("errorInput");
         cnpj.focus()
-    }else{
+    } else {
         cnpj.classList.remove("errorInput")
     }
     if (telefone.value == "") {
         telefone.classList.add("errorInput");
         telefone.focus()
-    }else{
+    } else {
         telefone.classList.remove("errorInput")
     }
     if (termos.value != checked) {
         termos.classList.add("errorInput");
         termos.focus()
-    }else{
+    } else {
         termos.classList.remove("errorInput")
     }
 
-    if(email.value.indexOf("@")==-1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf('@')==1)){
+    if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf('@') == 1)) {
         email.classList.add("errorInput")
         email.focus()
-    }else{
+    } else {
         email.classList.remove("errorInput")
     }
 
@@ -129,9 +132,11 @@ function mascara_cnpj(){
 }
 function mascara_cep(){
     var cep = document.getElementById("cep")
-    if (cep.value.length == 5){
+    if (cep.value.length == 6){
         cep.value += "-"
-    } 
+    }else if (cep.value.length == 2){
+        cep.value += "." 
+    }
 }
 function mascara_telefone(){
     var telefone = document.getElementById("telefone")
@@ -144,16 +149,16 @@ function mascara_telefone(){
     }  
 }*/
 // mascara cpf, telefone, cnpj e cep usando jquery
-$(document).ready(function(){
-    $("#cep").mask('00.000-000');
-    $("#tele").mask('(00)00000-0000');
-    $("#cpf").mask('000.000.000-00');
-    $("#cnpj").mask('00.000.000/0000-00')
+$(document).ready(function () {
+    $("#cep").mask('00.000-000', { placeholder: '__.___-___' });
+    $("#tele").mask('(00)0000-0000', { placeholder: '(__)_____-____' });
+    $("#cpf").mask('000.000.000-00', { placeholder: '___.___.___-__' });
+    $("#cnpj").mask('00.000.000/0000-00', { placeholder: '__.___.___/____-__' })
 })
 
 
 // validador do cpf 
-function TestaCPF(strCPF) {
+/*function TestaCPF(strCPF) {
     var Soma;
     var Resto;
     Soma = 0;
@@ -181,5 +186,25 @@ if (cpf.value == false) {
     cpf.focus()
 }else{
     cpf.classList.remove("errorInput")
-}
-   
+}*/
+
+$(document).ready(function(){
+    $("#form").validate({
+        rules:{
+            cpf:{
+              maxlength: 14,
+              minlength: 14,
+              cpfBR: true,
+            },
+            termos:{
+                required: true,
+            },
+            cnpj:{
+                maxlength: 18,
+                minlength: 18,
+                cnpjBR: true,
+            },
+        }
+    })
+})
+
