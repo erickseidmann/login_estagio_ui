@@ -42,13 +42,19 @@
                     </div>
 
                     <div id="pf" class="row input-goup mt-1">
-                        <label>Nome</label>
-                        <input type="text" class="form-control bg-light " placeholder="ex: João" />
-                        <label>Sobrenome</label>
-                        <input type="text" class="form-control bg-light " placeholder="ex: fulano de tal" />
-                        <label>CPF*</label>
-                        <input id="cpf" type="text" name="cpf" class="form-control bg-light btn-outline-secondary"
-                            autocomplete="off" onkeyup="mascara_cpf()" />
+                        <div class="col-md-8">
+                            <label>Nome</label>
+                            <input type="text" class="form-control bg-light  " placeholder="ex: João" />
+                        </div>
+                        <div class="col-md-8">
+                            <label>Sobrenome</label>
+                            <input type="text" class="form-control bg-light " placeholder="ex: fulano de tal" />
+                        </div>
+                        <div class="col-md-7">
+                            <label>CPF*</label>
+                            <input id="cpf" type="text" name="cpf" class="form-control bg-light btn-outline-secondary"
+                                autocomplete="off" onkeyup="mascara_cpf()" />
+                        </div>
                     </div>
                     <div id="pj" class="input-goup mt-2">
                         <label>Razão Social</label>
@@ -59,7 +65,7 @@
                         <input id="cnpj" type="text" name="cnpj" class="form-control bg-light btn-outline-secondary"
                             autocomplete="off" onkeyup="mascara_cnpj()" />
                     </div>
-                    <div class="input-goup mt-2">
+                    <div class="col-md-8">
                         <label>Email*</label>
                         <input type="email" id="email" class="form-control bg-light btn-outline-secondary" />
                     </div>
@@ -75,11 +81,11 @@
                                 placeholder="*******" />
                         </div>
                     </div>
-                    <div class="input-goup mt-2">
+                    <div class="col-md-7">
                         <label>Data de Nascimento*</label>
-                        <input type="date" class="form-control bg-light btn-outline-secondary" />
+                        <input type="date" class="form-control bg-light " />
                     </div>
-                    <div class="input-goup mt-2">
+                    <div class="col-md-7">
                         <label>TELEFONE*</label>
                         <input type="tel" id="tele" class="form-control bg-light btn-outline-secondary" />
                     </div>
@@ -103,70 +109,73 @@
 
                     <!-- INFORMAÇÕES SOBRE O ENDEREÇO -->
 
-                    <div class="form-group mb-3">
-                        <label for="cep">CEP</label>
-                        <input type="text" name="cep" class="form-control" id="cep" maxlength="8"
-                            onkeyup="mascara_cep()" placeholder="__.___-__" />
-                        <label for="logradouro">Logradouro</label>
-                        <input type="text" name="logradouro" class="form-control" id="logradouro"
-                            placeholder="Logradouro" readonly />
+                    <div class="row input-goup mt-1">
+                        <div class="col-md-4  ">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" class="form-control bg-light outline-secondary" id="cep"
+                                maxlength="8" onkeyup="mascara_cep()" placeholder="__.___-__" />
+                        </div>
+                        <div class="col-md-7  ">
+                            <label for="logradouro">Logradouro</label>
+                            <input type="text" name="logradouro" class="form-control bg-light outline-secondary"
+                                id="logradouro" placeholder="Logradouro" readonly />
+                        </div>
                     </div>
-
-                    <div class="form-group mb-3">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Cidade"
-                            readonly />
+                    <div class="row input-goup mt-1">
+                        <div class="col-md-7 ">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" name="cidade" class="form-control bg-light outline-secondary" id="cidade"
+                                placeholder="Cidade" readonly />
+                        </div>
+                        <div class="col-md-4 ">
+                            <label for="estado">Estado</label>
+                            <select id="uf" class="form-control form-select bg-light outline-secondary " readonly>
+                                <option selected>Escolher...</option>
+                                <option value="MG">MG</option>
+                                <option value="DF">DF</option>
+                                <option value="SP">SP</option>
+                                <option value="GO">GO</option>
+                                <option value="RR">RR</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="AC">AC</option>
+                                <option value="RO">RO</option>
+                                <option value="TO">TO</option>
+                                <option value="MA">MA</option>
+                                <option value="PI">PI</option>
+                                <option value="CE">CE</option>
+                                <option value="RN">RN</option>
+                                <option value="PB">PB</option>
+                                <option value="PE">PE</option>
+                                <option value="AL">AL</option>
+                                <option value="SE">SE</option>
+                                <option value="BA">BA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="ES">ES</option>
+                                <option value="RJ">RJ</option>
+                                <option value="PR">PR</option>
+                                <option value="SC">SC</option>
+                                <option value="RS">RS</option>
+                            </select>
+                        </div>
                     </div>
-
-                    <div class="form-group mb-3">
-                        <label for="estado">Estado</label>
-                        <select id="uf" class="form-control form-select" readonly>
-                            <option selected>Escolher...</option>
-                            <option value="MG">MG</option>
-                            <option value="DF">DF</option>
-                            <option value="SP">SP</option>
-                            <option value="GO">GO</option>
-                            <option value="RR">RR</option>
-                            <option value="AP">AP</option>
-                            <option value="AM">AM</option>
-                            <option value="AC">AC</option>
-                            <option value="RO">RO</option>
-                            <option value="TO">TO</option>
-                            <option value="MA">MA</option>
-                            <option value="PI">PI</option>
-                            <option value="CE">CE</option>
-                            <option value="RN">RN</option>
-                            <option value="PB">PB</option>
-                            <option value="PE">PE</option>
-                            <option value="AL">AL</option>
-                            <option value="SE">SE</option>
-                            <option value="BA">BA</option>
-                            <option value="MT">MT</option>
-                            <option value="MS">MS</option>
-                            <option value="ES">ES</option>
-                            <option value="RJ">RJ</option>
-                            <option value="PR">PR</option>
-                            <option value="SC">SC</option>
-                            <option value="RS">RS</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group mb-3">
+                    <div class="col-md-7">
                         <label for="bairro">Bairro</label>
                         <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro"
                             readonly />
                     </div>
-
-                    <div class="form-group mb-3">
-                        <label for="numero">Número</label>
-                        <input type="number" name="numero" class="form-control" id="numero" placeholder="Número" />
+                    <div class="row input-goup mt-1">
+                        <div class="col-md-4 ">
+                            <label for="numero">Número</label>
+                            <input type="number" name="numero" class="form-control" id="numero" placeholder="Número" />
+                        </div>
+                        <div class="col-md-7">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" name="complemento" class="form-control" id="complemento"
+                                placeholder="complemento" />
+                        </div>
                     </div>
-                    <div class="form-group mb-3">
-                        <label for="complemento">Complemento</label>
-                        <input type="text" name="complemento" class="form-control" id="complemento"
-                            placeholder="complemento" />
-                    </div>
-
                     <div class="form-group input-goup mt-2">
                         <label for="opiniao">Deixe sua opinião conosco!</label>
                         <textarea class="form-control" id="opiniao" rows="3"></textarea>

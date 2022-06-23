@@ -1,8 +1,8 @@
 $("#cep").on("change", function () {
-    
+
     var numCep = $("#cep").val().toString().replace(/-/, '').replace('.', '');
     var url = "https://viacep.com.br/ws/" + numCep + "/json";
-    
+
     $.ajax({
         url: url,
         type: "get",
@@ -30,7 +30,7 @@ btn.addEventListener('click', function () {
 
     if (pf.style.display === "block") {
         pf.style.display = 'none';
-    } else if (pj === true){
+    } else if (pj === true) {
         pf.style.display = 'block';
     } else {
         pf.style.display = 'block';
@@ -93,12 +93,7 @@ form.addEventListener('submit', (evente) => {
     } else {
         telefone.classList.remove("errorInput")
     }
-    if (termos.value != checked) {
-        termos.classList.add("errorInput");
-        termos.focus()
-    } else {
-        termos.classList.remove("errorInput")
-    }
+
 
     if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf('@') == 1)) {
         email.classList.add("errorInput")
@@ -188,18 +183,18 @@ if (cpf.value == false) {
     cpf.classList.remove("errorInput")
 }*/
 
-$(document).ready(function(){
+$(document).ready(function () {
     $("#form").validate({
-        rules:{
-            cpf:{
-              maxlength: 14,
-              minlength: 14,
-              cpfBR: true,
+        rules: {
+            cpf: {
+                maxlength: 14,
+                minlength: 14,
+                cpfBR: true,
             },
-            termos:{
+            termos: {
                 required: true,
             },
-            cnpj:{
+            cnpj: {
                 maxlength: 18,
                 minlength: 18,
                 cnpjBR: true,
