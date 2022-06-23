@@ -23,9 +23,9 @@
                 </div>
                 <span class="small d-block text-center">
                     Cadastre com sua conta
-                    <button type="button" class="btn">
+                    <a href="https://www.google.com/intl/pt-BR/account/about/" target="_blank">
                         <b> Google</b>
-                    </button></span>
+                    </a></span>
                 <form class="form" id="form">
 
                     <div class="row input-goup mt-1">
@@ -41,12 +41,11 @@
                         </div>
                     </div>
 
-                    <div id="pf" class="input-goup mt-2">
+                    <div id="pf" class="row input-goup mt-1">
                         <label>Nome</label>
-                        <input type="text" class="form-control bg-light btn-outline-secondary" placeholder="ex: João" />
+                        <input type="text" class="form-control bg-light " placeholder="ex: João" />
                         <label>Sobrenome</label>
-                        <input type="text" class="form-control bg-light btn-outline-secondary"
-                            placeholder="ex: fulano de tal" />
+                        <input type="text" class="form-control bg-light " placeholder="ex: fulano de tal" />
                         <label>CPF*</label>
                         <input id="cpf" type="text" name="cpf" class="form-control bg-light btn-outline-secondary"
                             autocomplete="off" onkeyup="mascara_cpf()" />
@@ -57,26 +56,24 @@
                         <label>Nome Fantasia</label>
                         <input type="text" class="form-control bg-light btn-outline-secondary" />
                         <label>CNPJ*</label>
-                        <input id="cnpj" type="text" name="cnpj" class="form-control bg-light btn-outline-secondary" 
+                        <input id="cnpj" type="text" name="cnpj" class="form-control bg-light btn-outline-secondary"
                             autocomplete="off" onkeyup="mascara_cnpj()" />
                     </div>
                     <div class="input-goup mt-2">
                         <label>Email*</label>
                         <input type="email" id="email" class="form-control bg-light btn-outline-secondary" />
                     </div>
-                    <div class="input-goup mt-2">
-                        <label>Login*</label>
-                        <input type="text" class="form-control bg-light btn-outline-secondary" placeholder="Login" />
-                    </div>
-                    <div class="input-goup mt-2">
-                        <label>Senha*</label>
-                        <input type="password" class="form-control bg-light btn-outline-secondary"
-                            placeholder="*******" />
-                    </div>
-                    <div class="input-goup mt-2">
-                        <label>Repita a senha*</label>
-                        <input type="password" class="form-control bg-light btn-outline-secondary"
-                            placeholder="*******" />
+                    <div class="row input-goup mt-1">
+                        <div class="col-md-6">
+                            <label>Senha*</label>
+                            <input type="password" class="form-control bg-light btn-outline-secondary"
+                                placeholder="*******" />
+                        </div>
+                        <div class="col-md-6">
+                            <label>Repita a senha*</label>
+                            <input type="password" class="form-control bg-light outline-secondary"
+                                placeholder="*******" />
+                        </div>
                     </div>
                     <div class="input-goup mt-2">
                         <label>Data de Nascimento*</label>
@@ -108,10 +105,8 @@
 
                     <div class="form-group mb-3">
                         <label for="cep">CEP</label>
-                        <input type="text" name="cep" class="form-control" id="cep" maxlength="8" onkeyup="mascara_cep()" placeholder="__.___-__" />
-                    </div>
-
-                    <div class="form-group mb-3">
+                        <input type="text" name="cep" class="form-control" id="cep" maxlength="8"
+                            onkeyup="mascara_cep()" placeholder="__.___-__" />
                         <label for="logradouro">Logradouro</label>
                         <input type="text" name="logradouro" class="form-control" id="logradouro"
                             placeholder="Logradouro" readonly />
@@ -178,8 +173,10 @@
                     </div>
 
                     <div class="form-check form-check-inline input-goup mt-2">
-                        <label class="form-check-label" for="termos">Li e aceito os termos e condições</label>
-                        <input class="form-check-input" name="termos" type="checkbox" id="termos" value="termos"  />
+                        <label class="form-check-label" for="termos">Li e aceito os <a
+                                href="https://policies.google.com/terms?hl=pt-BR" target="_blank"> termos e condições
+                            </a></label>
+                        <input class="form-check-input" name="termos" type="checkbox" id="termos" value="termos" />
 
                     </div>
 
@@ -203,7 +200,8 @@
                 </form>
 
                 <button type="button" class="btn btn-default btn-block mt2">
-                    <b> Já tenho conta! </b>
+                    <a href="https://policies.google.com/terms?hl=pt-BR" target="_blank">Já tenho conta
+                    </a>
                 </button>
             </div>
         </div>
@@ -221,7 +219,7 @@
     <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/additional-methods.js"></script>
     <script type="text/javascript" src="js/localization/messages_pt_BR.js"></script>
-    
+
 
 </body>
 
