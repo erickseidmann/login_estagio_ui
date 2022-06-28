@@ -23,20 +23,6 @@ $("#cep").on("change", function () {
 
 /* Para escolher PJ ou PF */
 
-var btn = document.querySelector('#pfbtn');
-var pf = document.querySelector("#pf");
-
-btn.addEventListener('click', function () {
-
-    if (pf.style.display === "block") {
-        pf.style.display = 'none';
-    } else if (pj === true) {
-        pf.style.display = 'block';
-    } else {
-        pf.style.display = 'block';
-    }
-})
-
 var btn = document.querySelector('#pjbtn');
 var pj = document.querySelector("#pj");
 

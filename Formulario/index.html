@@ -14,14 +14,15 @@
     <title>Formulario de Cadastro</title>
 </head>
 
-<body class="bg-color">
-    <div class="container-fluid h-100">
-        <div class="row form-cadastro justify-content-center">
-            <div class="col-4 aling-self-center area-form border">
+<body class="bg-dark">
+    <div class="container ">
+        <div class="row form-cadastro justify-content-center bg-dark ">
+            <div class="col-6 aling-self-center area-form border bg-white">
                 <div class="row justify-content-center mb-4">
-                    <img src="/Formulario/img/logo.jpg" class="rounded-circle" alt="logo ui" />
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/welcome-video-design-template-6ef541fd151da84baea3a60a489d6a9c_screen.jpg?ts=1577643382"
+                        class="rounded-circle" alt="logo ui" />
                 </div>
-                <span class="small d-block text-center">
+                <span class="small d-block ">
                     Cadastre com sua conta
                     <a href="https://www.google.com/intl/pt-BR/account/about/" target="_blank">
                         <b> Google</b>
@@ -29,12 +30,7 @@
                 <form class="form" id="form">
 
                     <div class="row input-goup mt-1">
-                        <div class="col-md-6 ">
-                            <button id="pfbtn" type="button" class="btn btn-info btn-block">
-                                Sou Pessoa Fisica*
-                            </button>
-                        </div>
-                        <div class="col-md-6  ">
+                        <div class="col-md-6">
                             <button id="pjbtn" type="button" class="btn btn-info btn-block">
                                 Sou Pessoa Juridica*
                             </button>
@@ -42,15 +38,15 @@
                     </div>
 
                     <div id="pf" class="row input-goup mt-1">
-                        <div class="col-md-8">
-                            <label>Nome</label>
+                        <div class="col-md-8 pt-2">
+                            <label>Nome*</label>
                             <input type="text" class="form-control bg-light  " placeholder="ex: João" />
                         </div>
-                        <div class="col-md-8">
-                            <label>Sobrenome</label>
+                        <div class="col-md-8 pt-2">
+                            <label>Sobrenome*</label>
                             <input type="text" class="form-control bg-light " placeholder="ex: fulano de tal" />
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7 pt-2">
                             <label>CPF*</label>
                             <input id="cpf" type="text" name="cpf" class="form-control bg-light btn-outline-secondary"
                                 autocomplete="off" onkeyup="mascara_cpf()" />
@@ -70,26 +66,26 @@
                         <input type="email" id="email" class="form-control bg-light btn-outline-secondary" />
                     </div>
                     <div class="row input-goup mt-1">
-                        <div class="col-md-6">
+                        <div class="col-md-6 pt-2">
                             <label>Senha*</label>
                             <input type="password" class="form-control bg-light btn-outline-secondary"
                                 placeholder="*******" />
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 pt-3">
                             <label>Repita a senha*</label>
                             <input type="password" class="form-control bg-light outline-secondary"
                                 placeholder="*******" />
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-4 pt-2">
                         <label>Data de Nascimento*</label>
                         <input type="date" class="form-control bg-light " />
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-5 pt-3">
                         <label>TELEFONE*</label>
                         <input type="tel" id="tele" class="form-control bg-light btn-outline-secondary" />
                     </div>
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-3 pt-3">
                         <label for="sexo">Sexo</label>
                         <div>
                             <div class="form-check form-check-inline">
@@ -110,24 +106,24 @@
                     <!-- INFORMAÇÕES SOBRE O ENDEREÇO -->
 
                     <div class="row input-goup mt-1">
-                        <div class="col-md-4  ">
+                        <div class="col-md-4 pt-3 ">
                             <label for="cep">CEP</label>
                             <input type="text" name="cep" class="form-control bg-light outline-secondary" id="cep"
                                 maxlength="8" onkeyup="mascara_cep()" placeholder="__.___-__" />
                         </div>
-                        <div class="col-md-7  ">
+                        <div class="col-md-7 pt-3 ">
                             <label for="logradouro">Logradouro</label>
                             <input type="text" name="logradouro" class="form-control bg-light outline-secondary"
                                 id="logradouro" placeholder="Logradouro" readonly />
                         </div>
                     </div>
                     <div class="row input-goup mt-1">
-                        <div class="col-md-7 ">
+                        <div class="col-md-7 pt-3">
                             <label for="cidade">Cidade</label>
                             <input type="text" name="cidade" class="form-control bg-light outline-secondary" id="cidade"
                                 placeholder="Cidade" readonly />
                         </div>
-                        <div class="col-md-4 ">
+                        <div class="col-md-4 pt-3">
                             <label for="estado">Estado</label>
                             <select id="uf" class="form-control form-select bg-light outline-secondary " readonly>
                                 <option selected>Escolher...</option>
@@ -160,23 +156,23 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 pt-3">
                         <label for="bairro">Bairro</label>
                         <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro"
                             readonly />
                     </div>
-                    <div class="row input-goup mt-1">
+                    <div class="row input-goup mt-1 pt-3">
                         <div class="col-md-4 ">
                             <label for="numero">Número</label>
                             <input type="number" name="numero" class="form-control" id="numero" placeholder="Número" />
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-4">
                             <label for="complemento">Complemento</label>
                             <input type="text" name="complemento" class="form-control" id="complemento"
                                 placeholder="complemento" />
                         </div>
                     </div>
-                    <div class="form-group input-goup mt-2">
+                    <div class="form-group input-goup mt-2 pt-3">
                         <label for="opiniao">Deixe sua opinião conosco!</label>
                         <textarea class="form-control" id="opiniao" rows="3"></textarea>
                     </div>
@@ -190,17 +186,17 @@
                     </div>
 
                     <div class="row input-goup mt-2">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <button id="btncadastrar" type="submit" class="btn btn-info btn-block">
                                 CADASTRAR
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-2">
                             <button type="button" class="btn btn-secondary btn-block">
                                 VOLTAR
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-2">
                             <button type="reset" class="btn btn-secondary btn-block">
                                 LIMPAR
                             </button>
