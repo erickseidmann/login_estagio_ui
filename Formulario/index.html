@@ -29,42 +29,42 @@
                     </a></span>
                 <form class="form" id="form">
 
-                    <div class="row input-goup mt-1">
-                        <div class="col-md-6 mb-2">
-                            <button id="pjbtn" type="button" class="btn bot-click  btn-info " >
+                    <div class="row input-goup mt-1 ">
+                        <div class="col-md-6 mb-3">
+                            <button id="pjbtn" type="button" class="btn bot-click  btn-info fw-semibold btn-sm">
                                 Sou Pessoa Juridica*
                             </button>
                         </div>
                     </div>
 
-                    <div id="pf" class="input-goup mt-1 mb-2">
-                        <div class="row input-goup mb-2">
-                            <div class="col-md-6 mb-2">
+                    <div id="pf" class="input-goup mt-1 mb-3 ">
+                        <div class="row input-goup mb-3 fw-semibold ">
+                            <div class="col-md-6 ">
                                 <label>Nome*</label>
                                 <input type="text" class="form-control bg-light  " id="nome" placeholder="ex: João" />
                             </div>
-                            <div class="col-md-6 mb-2">
+                            <div class="col-md-6 ">
                                 <label>Sobrenome*</label>
                                 <input type="text" class="form-control bg-light " id="sobrenome" name="sobrenome"
                                     placeholder="ex: fulano de tal" />
                             </div>
                         </div>
-                        <div class="row input-goup mb-2">
-                            <div class="col-md-6 mb-2">
+                        <div class="row input-goup mb-3 fw-semibold">
+                            <div class="col-md-6 ">
                                 <label>CPF*</label>
                                 <input id="cpf" type="text" name="cpf"
                                     class="form-control bg-light btn-outline-secondary" autocomplete="off"
                                     onkeyup="mascara_cpf()" />
                             </div>
-                            <div class="col-md-6 mb-2">
+                            <div class="col-md-6 ">
                                 <label>Email*</label>
                                 <input type="email" id="email" class="form-control bg-light btn-outline-secondary"
                                     placeholder="ex: meuemail@gmail.com" />
                             </div>
                         </div>
                     </div>
-                    <div id="pj" class="input-goup mb-2">
-                        <div class="row input-goup mb-2">
+                    <div id="pj" class="input-goup mb-3 fw-semibold">
+                        <div class="row input-goup mb-3">
                             <div class="col-md-6 ">
                                 <label>Razão Social*</label>
                                 <input type="text" class="form-control bg-light btn-outline-secondary" />
@@ -74,14 +74,14 @@
                                 <input type="text" class="form-control bg-light btn-outline-secondary" />
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3 fw-semibold">
                             <label>CNPJ*</label>
                             <input id="cnpj" type="text" name="cnpj" class="form-control bg-light btn-outline-secondary"
                                 autocomplete="off" onkeyup="mascara_cnpj()" />
                         </div>
                     </div>
 
-                    <div class="row input-goup mb-2">
+                    <div class="row input-goup mb-3 fw-semibold">
                         <div class="col-md-6 ">
                             <label>Senha*</label>
                             <input type="password" id="senha" class="form-control bg-light btn-outline-secondary"
@@ -93,7 +93,7 @@
                                 placeholder="*******" />
                         </div>
                     </div>
-                    <div class="row input-goup mb-2">
+                    <div class="row input-goup mb-3 fw-semibold">
                         <div class="col-md-6 ">
                             <label>Data de Nascimento*</label>
                             <input id="data" type="date" class="form-control bg-light " />
@@ -103,8 +103,8 @@
                             <input type="tel" id="tele" class="form-control bg-light btn-outline-secondary" />
                         </div>
                     </div>
-                    <div class="form-group mb-6 mb-2">
-                        <label for="sexo">Sexo</label>
+                    <div class="row input-group mb-6 mb-3">
+                        <label class="mb-1 fw-semibold" for="sexo">Sexo</label>
                         <div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="sexo" id="masculino" value="M" />
@@ -123,25 +123,25 @@
 
                     <!-- INFORMAÇÕES SOBRE O ENDEREÇO -->
 
-                    <div class="row input-goup mt-1 mb-2">
-                        <div class="col-md-6 mb-2 ">
+                    <div class="row input-goup mt-1 mb-3 fw-semibold">
+                        <div class="col-md-6  ">
                             <label for="cep">CEP*</label>
                             <input type="text" name="cep" class="form-control bg-light outline-secondary" id="cep"
                                 maxlength="8" onkeyup="mascara_cep()" placeholder="__.___-__" />
                         </div>
-                        <div class="col-md-6 mb-2 ">
+                        <div class="col-md-6 ">
                             <label for="logradouro">Logradouro</label>
                             <input type="text" name="logradouro" class="form-control bg-light outline-secondary"
                                 id="logradouro" placeholder="Logradouro" readonly />
                         </div>
                     </div>
-                    <div class="row input-goup mt-1  mb-2">
-                        <div class="col-md-6 mb-2">
+                    <div class="row input-goup mt-1  mb-3 fw-semibold">
+                        <div class="col-md-6 ">
                             <label for="cidade">Cidade</label>
                             <input type="text" name="cidade" class="form-control bg-light outline-secondary" id="cidade"
                                 placeholder="Cidade" readonly />
                         </div>
-                        <div class="col-md-6 mb-2">
+                        <div class="col-md-6 ">
                             <label for="estado">Estado</label>
                             <select id="uf" class="form-control form-select bg-light outline-secondary " readonly>
                                 <option selected>Escolher...</option>
@@ -175,8 +175,8 @@
                         </div>
                     </div>
 
-                    <div class="row input-goup mt-1 mb-2">
-                        <div class="col-md-6 mb-2">
+                    <div class="row input-goup mt-1 mb-3 fw-semibold">
+                        <div class="col-md-6 mb-3">
                             <label for="bairro">Bairro</label>
                             <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro"
                                 readonly />
@@ -186,41 +186,41 @@
                             <input type="number" name="numero" class="form-control" id="numero" placeholder="Número" />
                         </div>
                     </div>
-                    <div class="col-md-6  mb-2">
+                    <div class="col-md-6  mb-3 fw-semibold">
                         <label for="complemento">Complemento</label>
                         <input type="text" name="complemento" class="form-control" id="complemento"
                             placeholder="complemento" />
                     </div>
-                    <div class="form-group input-goup  mb-2">
+                    <div class="form-group input-goup  mb-3 fw-semibold">
                         <label for="opiniao">Deixe sua opinião conosco!</label>
                         <textarea class="form-control" id="opiniao" rows="3"></textarea>
                     </div>
 
                     <div class="form-check form-check-inline input-goup mb-4">
-                        <label class="form-check-label" for="termos">*Li e aceito os <a
+                        <label class="form-check-label fw-semibold" for="termos">*Li e aceito os <a
                                 href="https://policies.google.com/terms?hl=pt-BR" target="_blank"> termos e condições
                             </a></label>
                         <input class="form-check-input" name="termos" type="checkbox" id="termos" value="termos" />
-                        
+
 
                     </div>
 
-                    <div class="row btn-goup mb-2 ">
+                    <div class="row btn-goup mb-3 ">
                         <div class="container-fluid col">
-                            <button id="btncadastrar" type="submit" class="btn btn-info">
+                            <button id="btncadastrar" type="submit" class="btn btn-info fw-semibold">
                                 CADASTRAR
                             </button>
-                            <button type="button" class="btn btn-secondary ">
+                            <button type="button" class="btn btn-secondary  fw-semibold">
                                 VOLTAR
                             </button>
-                            <button type="reset" class="btn btn-secondary ">
+                            <button type="reset" class="btn btn-secondary fw-semibold ">
                                 LIMPAR
                             </button>
                         </div>
                     </div>
                 </form>
 
-                <button type="button" class="btn btn-default btn-block  mb-2">
+                <button type="button" class="btn btn-default btn-block  mb-3">
                     <a href="https://policies.google.com/terms?hl=pt-BR" target="_blank">Já tenho conta
                     </a>
                 </button>

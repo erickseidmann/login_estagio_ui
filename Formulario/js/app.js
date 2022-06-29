@@ -35,9 +35,9 @@ $("#cep").on("change", function () {
 var $divpj = $("#pjbtn");
 $divpj.click(function(){
 if ($divpj.hasClass("btn-info"))
-    $divpj.addClass("btn-outline-info").removeClass("btn-info");
+    $divpj.addClass("btn-outline-dark").removeClass("btn-info");
 else
-    $divpj.addClass("btn-info").removeClass("btn-outline-info");
+    $divpj.addClass("btn-info").removeClass("btn-outline-dark");
 });
 
  
