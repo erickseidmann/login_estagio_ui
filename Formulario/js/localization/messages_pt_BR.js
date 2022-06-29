@@ -27,7 +27,7 @@ $.extend( $.validator.messages, {
 	creditcard: "Por favor, forne&ccedil;a um cart&atilde;o de cr&eacute;dito v&aacute;lido.",
 	equalTo: "Por favor, forne&ccedil;a o mesmo valor novamente.",
 	maxlength: $.validator.format( "Por favor, forne&ccedil;a n&atilde;o mais que {0} caracteres." ),
-	minlength: $.validator.format( "Por favor, forne&ccedil;a ao menos {0} caracteres." ),
+	minlength: $.validator.format( "Por favor, forne&ccedil;a ao menos {0} numeros." ),
 	rangelength: $.validator.format( "Por favor, forne&ccedil;a um valor entre {0} e {1} caracteres de comprimento." ),
 	range: $.validator.format( "Por favor, forne&ccedil;a um valor entre {0} e {1}." ),
 	max: $.validator.format( "Por favor, forne&ccedil;a um valor menor ou igual a {0}." ),

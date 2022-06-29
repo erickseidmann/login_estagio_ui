@@ -21,7 +21,17 @@ $("#cep").on("change", function () {
 
 })
 
-/* Para escolher PJ ou PF */
+/* Para escolher PJ */
+
+$(document).ready(function(){
+   $(".bot-click").click(function(){
+      $(".bot-click")
+      .removeClass("btn-info");
+      $(this)
+      .addClass("btn-secondary"); 
+   });
+});
+
 
 var btn = document.querySelector('#pjbtn');
 var pj = document.querySelector("#pj");
@@ -47,45 +57,86 @@ form.addEventListener('submit', (evente) => {
     const cnpj = document.getElementById('cnpj')
     const cep = document.getElementById('cep')
     const telefone = document.getElementById('tele')
+    const nome = document.getElementById('nome')
+    const sobrenome = document.getElementById('sobrenome')
+    const data = document.getElementById('data')
+    const senha = document.getElementById('senha')
+    const rsenha = document.getElementById('rsenha')
     const termos = document.getElementById('termos')
 
     if (email.value == "") {
-        email.classList.add("errorInput");
+        email.classList.add("is-invalid");
         email.focus()
     } else {
-        email.classList.remove("errorInput")
+        email.classList.remove("is-invalid")
     }
-    if (cpf.value == "") {
-        cpf.classList.add("errorInput");
+    if (data.value == "") {
+        data.classList.add("is-invalid");
+        data.focus()
+    } else {
+        data.classList.remove("is-invalid")
+    }
+    if (senha.value == "") {
+        senha.classList.add("is-invalid");
+        senha.focus()
+    } else {
+        senha.classList.remove("is-invalid")
+    }
+    if (rsenha.value == "") {
+        rsenha.classList.add("is-invalid");
+        rsenha.focus()
+    } else {
+        rsenha.classList.remove("is-invalid")
+    }
+    if (termos.value == false) {
+        termos.classList.add("is-invalid");
+        termos.focus()
+    } else {
+        termos.classList.remove("is-invalid")
+    }
+    if (cpf.value == false) {
+        cpf.classList.add("is-invalid");
         cpf.focus()
     } else {
-        cpf.classList.remove("errorInput")
+        cpf.classList.remove("is-invalid")
     }
-    if (cep.value == "") {
-        cep.classList.add("errorInput");
+    if (cep.value == false) {
+        cep.classList.add("is-invalid");
         cep.focus()
     } else {
-        cep.classList.remove("errorInput")
+        cep.classList.remove("is-invalid")
     }
-    if (cnpj.value == "") {
-        cnpj.classList.add("errorInput");
+    if (cnpj.value == false) {
+        cnpj.classList.add("is-invalid");
         cnpj.focus()
     } else {
-        cnpj.classList.remove("errorInput")
+        cnpj.classList.remove("is-invalid")
     }
     if (telefone.value == "") {
-        telefone.classList.add("errorInput");
+        telefone.classList.add("is-invalid");
         telefone.focus()
     } else {
-        telefone.classList.remove("errorInput")
+        telefone.classList.remove("is-invalid")
+    }
+    if (nome.value == "") {
+        nome.classList.add("is-invalid")
+        nome.focus()
+    } else {
+        nome.classList.remove("is-invalid")
+    }
+    if (sobrenome.value == "") {
+        sobrenome.classList.add("is-invalid");
+        sobrenome.focus()
+    } else {
+        sobrenome.classList.remove("is-invalid")
     }
 
 
     if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf('@') == 1)) {
-        email.classList.add("errorInput")
+        email.classList.add("is-invalid")
         email.focus()
     } else {
-        email.classList.remove("errorInput")
+        email.classList.remove("is-invalid")
     }
 
 })
@@ -173,8 +224,6 @@ $(document).ready(function () {
     $("#form").validate({
         rules: {
             cpf: {
-                maxlength: 14,
-                minlength: 14,
                 cpfBR: true,
             },
             termos: {
@@ -184,6 +233,9 @@ $(document).ready(function () {
                 maxlength: 18,
                 minlength: 18,
                 cnpjBR: true,
+            },
+            cep: {
+                postalcodeBR: true,
             },
         }
     })
