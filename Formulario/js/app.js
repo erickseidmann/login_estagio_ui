@@ -10,7 +10,6 @@ $("#cep").on("change", function () {
 
         success: function (dados) {
             console.log(dados);
-            $("#cep").addClass("is-valid")
             $("#uf").val(dados.uf);
             $("#cidade").val(dados.localidade);
             $("#logradouro").val(dados.logradouro);
@@ -23,14 +22,25 @@ $("#cep").on("change", function () {
 
 /* Para escolher PJ */
 
-$(document).ready(function(){
-   $(".bot-click").click(function(){
-      $(".bot-click")
-      .removeClass("btn-info");
-      $(this)
-      .addClass("btn-secondary"); 
-   });
+//$(document).ready(function(){
+//   $(".bot-click").click(function(){
+//      $(".bot-click")
+//      .removeClass("btn-info");
+//      $(this)
+//      .addClass("btn-secondary"); 
+//   });
+//
+//});
+
+var $divpj = $("#pjbtn");
+$divpj.click(function(){
+if ($divpj.hasClass("btn-info"))
+    $divpj.addClass("btn-outline-info").removeClass("btn-info");
+else
+    $divpj.addClass("btn-info").removeClass("btn-outline-info");
 });
+
+ 
 
 
 var btn = document.querySelector('#pjbtn');
@@ -64,6 +74,12 @@ form.addEventListener('submit', (evente) => {
     const rsenha = document.getElementById('rsenha')
     const termos = document.getElementById('termos')
 
+    if (termos.value == false) {
+        termos.classList.add("is-invalid");
+        termos.focus()
+    } else {
+        termos.classList.remove("is-invalid")
+    }
     if (email.value == "") {
         email.classList.add("is-invalid");
         email.focus()
@@ -87,12 +103,6 @@ form.addEventListener('submit', (evente) => {
         rsenha.focus()
     } else {
         rsenha.classList.remove("is-invalid")
-    }
-    if (termos.value == false) {
-        termos.classList.add("is-invalid");
-        termos.focus()
-    } else {
-        termos.classList.remove("is-invalid")
     }
     if (cpf.value == false) {
         cpf.classList.add("is-invalid");
