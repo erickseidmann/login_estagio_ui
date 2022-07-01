@@ -21,23 +21,12 @@ $("#cep").on("change", function () {
 })
 
 /* Para escolher PJ */
-
-//$(document).ready(function(){
-//   $(".bot-click").click(function(){
-//      $(".bot-click")
-//      .removeClass("btn-info");
-//      $(this)
-//      .addClass("btn-secondary"); 
-//   });
-//
-//});
-
 var $divpj = $("#pjbtn");
 $divpj.click(function(){
 if ($divpj.hasClass("btn-info"))
-    $divpj.addClass("btn-outline-dark").removeClass("btn-info");
+    $divpj.addClass("btn-secondary").removeClass("btn-info");
 else
-    $divpj.addClass("btn-info").removeClass("btn-outline-dark");
+    $divpj.addClass("btn-info").removeClass("btn-secondary");
 });
 var btn = document.querySelector('#pjbtn');
 var pj = document.querySelector("#pj");
@@ -154,9 +143,7 @@ $(document).ready(function () {
     $("#cnpj").mask('00.000.000/0000-00', { placeholder: '__.___.___/____-__' })
 })
 
-
 // validador do cpf/ termos / cnpj jquery  
-
 $(document).ready(function () {
     $("#form").validate({
         rules: {
