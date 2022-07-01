@@ -45,8 +45,9 @@ btn.addEventListener('click', function () {
 const btncadastrar = document.getElementById('btncadastrar')
 
 form.addEventListener('submit', (evente) => {
-    evente.preventDefault()
+    
 
+    const termos = document.getElementById('termos')
     const email = document.getElementById('email')
     const cpf = document.getElementById('cpf')
     const cnpj = document.getElementById('cnpj')
@@ -57,7 +58,7 @@ form.addEventListener('submit', (evente) => {
     const data = document.getElementById('data')
     const senha = document.getElementById('senha')
     const rsenha = document.getElementById('rsenha')
-    const termos = document.getElementById('termos')
+    
 
     if (termos.value == false) {
         termos.classList.add("is-invalid");
