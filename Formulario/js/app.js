@@ -170,11 +170,11 @@ $(document).ready(function () {
             },
             senha: {
                 required: true,
-                rangelength: [4,10],
+                rangelength: [6,10],
             },
             senha2: {
                 required: true,
-                equalTo:"$senha" ,               
+                equalTo:"#senha",               
             },
             email: {
                 required: true,
@@ -182,6 +182,48 @@ $(document).ready(function () {
             },
             nome:{
                 required: true,
+            },
+            tele:{
+                required: true,
+            },
+            data:{
+                required: true,
+            },
+        },
+        messages: {
+            cpf: {
+                required: "Este campo é obrigatório!",
+                minlength: "Deve conter no min 12 numeros!",
+            },
+            termos: {
+                required: "Você deve aceitar os termos e condições!",
+            },
+            cnpj: {
+                minlength: "Deve conter no min 16 numeros!",
+            },
+            cep: {
+                required: "Este campo é obrigatório!",
+                minlength: "Deve conter no min 8 numeros!",
+            },
+            senha: {
+                required: "Este campo é obrigatório!",
+                rangelength: "Deve conter entre 6 e 10 caracteres!",
+            },
+            senha2: {
+                required: "Este campo é obrigatório!",
+                equalTo:"As senhas estão diferentes, verifique!",                               
+            },
+            email: {
+                required: "Este campo é obrigatório!",
+            },
+            nome:{
+                required: "Este campo é obrigatório!",
+            },
+            tele:{
+                required: "Este campo é obrigatório!",
+            },
+            data:{
+                required: "Este campo é obrigatório!",
             },
         }
     })
