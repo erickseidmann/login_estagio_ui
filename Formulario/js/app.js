@@ -42,7 +42,7 @@ btn.addEventListener('click', function () {
 
 /* Obrigatorio CPF, CNPJ , email   */
 
-const btncadastrar = document.getElementById('btncadastrar')
+/*const btncadastrar = document.getElementById('btncadastrar')
 
 form.addEventListener('submit', (evente) => {
     
@@ -135,7 +135,7 @@ form.addEventListener('submit', (evente) => {
         email.classList.remove("is-invalid")
     }
 
-})
+})*/
 // mascara cpf, telefone, cnpj e cep usando jquery
 $(document).ready(function () {
     $("#cep").mask('00.000-000', { placeholder: '__.___-___' });
@@ -149,7 +149,10 @@ $(document).ready(function () {
     $("#form").validate({
         rules: {
             cpf: {
+                required: true,
                 cpfBR: true,
+                maxlength: 14,
+                minlength: 14,
             },
             termos: {
                 required: true,
@@ -160,7 +163,25 @@ $(document).ready(function () {
                 cnpjBR: true,
             },
             cep: {
+                required: true,
                 postalcodeBR: true,
+                maxlength: 10,
+                minlength: 10,
+            },
+            senha: {
+                required: true,
+                rangelength: [4,10],
+            },
+            senha2: {
+                required: true,
+                equalTo:"$senha" ,               
+            },
+            email: {
+                required: true,
+                email: true,
+            },
+            nome:{
+                required: true,
             },
         }
     })
