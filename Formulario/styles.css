@@ -15,3 +15,9 @@
 .branco {
     color: white;
 }
+
+label.error{
+    color:#f00;
+    font-weight: bold;
+    border: #f00;
+}

@@ -41,7 +41,7 @@
                         <div class="row input-goup mb-3 fw-semibold ">
                             <div class="col-md-6 ">
                                 <label>Nome*</label>
-                                <input type="text" class="form-control bg-light  " id="nome" placeholder="ex: João" />
+                                <input type="text" class="form-control bg-light  " name="nome" id="nome" placeholder="ex: João" />
                             </div>
                             <div class="col-md-6 ">
                                 <label>Sobrenome*</label>
@@ -132,21 +132,21 @@
                                 maxlength="8" onkeyup="mascara_cep()" placeholder="__.___-__" />
                         </div>
                         <div class="col-md-6 ">
-                            <label for="logradouro">Logradouro</label>
+                            <label for="logradouro">Logradouro*</label>
                             <input type="text" name="logradouro" class="form-control bg-light outline-secondary"
                                 id="logradouro" placeholder="Logradouro" readonly />
                         </div>
                     </div>
                     <div class="row input-goup mt-1  mb-3 fw-semibold">
                         <div class="col-md-6 ">
-                            <label for="cidade">Cidade</label>
+                            <label for="cidade">Cidade*</label>
                             <input type="text" name="cidade" class="form-control bg-light outline-secondary" id="cidade"
                                 placeholder="Cidade" readonly />
                         </div>
                         <div class="col-md-6 ">
-                            <label for="estado">Estado</label>
-                            <select id="uf" class="form-control form-select bg-light outline-secondary " readonly>
-                                <option selected>Escolher...</option>
+                            <label for="estado">Estado*</label>
+                            <select id="uf" name="estado" class="form-control form-select bg-light outline-secondary " readonly>
+                                <option selected></option>
                                 <option value="MG">MG</option>
                                 <option value="DF">DF</option>
                                 <option value="SP">SP</option>
@@ -179,12 +179,12 @@
 
                     <div class="row input-goup mt-1 mb-3 fw-semibold">
                         <div class="col-md-6 mb-3">
-                            <label for="bairro">Bairro</label>
+                            <label for="bairro">Bairro*</label>
                             <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro"
                                 readonly />
                         </div>
                         <div class="col-md-6 ">
-                            <label for="numero">Número</label>
+                            <label for="numero">Número*</label>
                             <input type="number" name="numero" class="form-control" id="numero" placeholder="Número" />
                         </div>
                     </div>
@@ -209,7 +209,7 @@
 
                     <div class="row btn-goup mb-3 ">
                         <div class="container-fluid col">
-                            <button id="btncadastrar" type="submit" class="btn btn-info fw-semibold">
+                            <button id="btncadastrar" name="btncadastrar" type="submit" class="btn btn-info fw-semibold">
                                 CADASTRAR
                             </button>
                             <button type="button" class="btn btn-secondary  fw-semibold">

@@ -22,11 +22,11 @@ $("#cep").on("change", function () {
 
 /* Para escolher PJ */
 var $divpj = $("#pjbtn");
-$divpj.click(function(){
-if ($divpj.hasClass("btn-info"))
-    $divpj.addClass("btn-secondary").removeClass("btn-info");
-else
-    $divpj.addClass("btn-info").removeClass("btn-secondary");
+$divpj.click(function () {
+    if ($divpj.hasClass("btn-info"))
+        $divpj.addClass("btn-secondary").removeClass("btn-info");
+    else
+        $divpj.addClass("btn-info").removeClass("btn-secondary");
 });
 var btn = document.querySelector('#pjbtn');
 var pj = document.querySelector("#pj");
@@ -40,12 +40,12 @@ btn.addEventListener('click', function () {
     }
 })
 
-/* Obrigatorio CPF, CNPJ , email   */
 
-/*const btncadastrar = document.getElementById('btncadastrar')
+/* Obrigatorio CPF, CNPJ , email   */
+const btncadastrar = document.getElementById('btncadastrar')
 
 form.addEventListener('submit', (evente) => {
-    
+
 
     const termos = document.getElementById('termos')
     const email = document.getElementById('email')
@@ -57,8 +57,13 @@ form.addEventListener('submit', (evente) => {
     const sobrenome = document.getElementById('sobrenome')
     const data = document.getElementById('data')
     const senha = document.getElementById('senha')
-    const rsenha = document.getElementById('rsenha')
-    
+    const rsenha = document.getElementById('senha2')
+    const logradouro = document.getElementById('logradouro')
+    const cidade = document.getElementById('cidade')
+    const estado = document.getElementById('uf')
+    const bairro = document.getElementById('bairro')
+    const numero = document.getElementById('numero')
+
 
     if (termos.value == false) {
         termos.classList.add("is-invalid");
@@ -126,16 +131,37 @@ form.addEventListener('submit', (evente) => {
     } else {
         sobrenome.classList.remove("is-invalid")
     }
-
-
-    if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf('@') == 1)) {
-        email.classList.add("is-invalid")
-        email.focus()
+    if (logradouro.value == "") {
+        logradouro.classList.add("is-invalid");
+        logradouro.focus()
     } else {
-        email.classList.remove("is-invalid")
+        logradouro.classList.remove("is-invalid")
     }
-
-})*/
+    if (cidade.value == "") {
+        cidade.classList.add("is-invalid");
+        cidade.focus()
+    } else {
+        cidade.classList.remove("is-invalid")
+    }
+    if (estado.value == "") {
+        estado.classList.add("is-invalid");
+        estado.focus()
+    } else {
+        estado.classList.remove("is-invalid")
+    }
+    if (bairro.value == "") {
+        bairro.classList.add("is-invalid");
+        bairro.focus()
+    } else {
+        bairro.classList.remove("is-invalid")
+    }
+    if (numero.value == "") {
+        numero.classList.add("is-invalid");
+        numero.focus()
+    } else {
+        numero.classList.remove("is-invalid")
+    }
+})
 // mascara cpf, telefone, cnpj e cep usando jquery
 $(document).ready(function () {
     $("#cep").mask('00.000-000', { placeholder: '__.___-___' });
@@ -170,23 +196,41 @@ $(document).ready(function () {
             },
             senha: {
                 required: true,
-                rangelength: [6,10],
+                rangelength: [6, 10],
             },
             senha2: {
                 required: true,
-                equalTo:"#senha",               
+                equalTo: "#senha",
             },
             email: {
                 required: true,
                 email: true,
             },
-            nome:{
+            nome: {
                 required: true,
             },
-            tele:{
+            sobrenome: {
                 required: true,
             },
-            data:{
+            tele: {
+                required: true,
+            },
+            data: {
+                required: true,
+            },
+            logradouro: {
+                required: true,
+            },
+            cidade: {
+                required: true,
+            },
+            estado: {
+                required: true,
+            },
+            bairro: {
+                required: true,
+            },
+            numero: {
                 required: true,
             },
         },
@@ -211,18 +255,18 @@ $(document).ready(function () {
             },
             senha2: {
                 required: "Este campo é obrigatório!",
-                equalTo:"As senhas estão diferentes, verifique!",                               
+                equalTo: "As senhas estão diferentes, verifique!",
             },
             email: {
                 required: "Este campo é obrigatório!",
             },
-            nome:{
+            nome: {
                 required: "Este campo é obrigatório!",
             },
-            tele:{
+            tele: {
                 required: "Este campo é obrigatório!",
             },
-            data:{
+            data: {
                 required: "Este campo é obrigatório!",
             },
         }
