@@ -168,6 +168,7 @@ $(document).ready(function () {
     $("#tele").mask('(00)0000-0000', { placeholder: '(__)_____-____' });
     $("#cpf").mask('000.000.000-00', { placeholder: '___.___.___-__' });
     $("#cnpj").mask('00.000.000/0000-00', { placeholder: '__.___.___/____-__' })
+    $("#data").mask('00/00/0000', { placeholder: '__/__/____' })
 })
 
 // validador do cpf/ termos / cnpj jquery  
@@ -216,7 +217,8 @@ $(document).ready(function () {
                 required: true,
             },
             data: {
-                required: true,
+                required: true, 
+                dateNL: true,     
             },
             logradouro: {
                 required: true,
