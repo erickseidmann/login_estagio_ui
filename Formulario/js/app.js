@@ -235,6 +235,9 @@ $(document).ready(function () {
             numero: {
                 required: true,
             },
+            sexo: {
+                required: true,
+            }
         },
         messages: {
             cpf: {
