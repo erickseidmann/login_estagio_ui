@@ -175,12 +175,12 @@ $(document).ready(function () {
 
 // validador do cpf/ termos / cnpj jquery  
 $(document).ready(function () {
-    
-    $.validator.addMethod('strongPassword', function(value, element){
-        return this.optional(element)
-        || value.length >=6
-        && /\d/.test(value)
-        && /[a-z]/i.test(value);
+
+    $.validator.addMethod('strongPassword', function (value, element) {
+        return this.optional(element) ||
+            value.length >= 6 &&
+            /\d/.test(value) &&
+            /[a-z]/i.test(value);
     }, "Sua senha deve conter ao menos 6 digitos sendo ao menos um numero e uma letra\.")
 
     $("#form").validate({
@@ -227,8 +227,8 @@ $(document).ready(function () {
                 required: true,
             },
             data: {
-                required: true, 
-                dateNL: true,     
+                required: true,
+                dateNL: true,
             },
             logradouro: {
                 required: true,
@@ -284,6 +284,13 @@ $(document).ready(function () {
             data: {
                 required: "Este campo é obrigatório!",
             },
+        },
+        errorPlacement: function (error, element) {
+            if (element.is(":radio")) {
+                error.appendTo(element.parents('.input-group'));
+            } else { // This is the default behavior 
+                error.insertAfter(element);
+            }
         }
     })
 })
