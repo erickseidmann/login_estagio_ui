@@ -171,6 +171,8 @@ $(document).ready(function () {
     $("#data").mask('00/00/0000', { placeholder: ' ___/__/____   📅' })
 })
 
+
+
 // validador do cpf/ termos / cnpj jquery  
 $(document).ready(function () {
     $("#form").validate({
@@ -278,3 +280,30 @@ $(document).ready(function () {
     })
 })
 
+// validar força da senha 
+$(document).ready(function(){
+
+    $("#senha").keyup(function() {
+
+        var strength = 1;
+
+        if(this.value.length >= 5) {
+            strength++;
+        }
+
+        if(this.value.match(/[a-z]+/)) {
+            strength++;
+        }
+
+        
+        if(this.value.match(/[0-9]+/)) {
+            strength++;
+        }
+
+        if(this.value.match(/[A-Z]+/)) {
+            strength++;
+        }
+
+        alert(strength);
+    });
+ });
