@@ -175,6 +175,14 @@ $(document).ready(function () {
 
 // validador do cpf/ termos / cnpj jquery  
 $(document).ready(function () {
+    
+    $.validator.addMethod('strongPassword', function(value, element){
+        return this.optional(element)
+        || value.length >=6
+        && /\d/.test(value)
+        && /[a-z]/i.test(value);
+    }, "Sua senha deve conter ao menos 6 digitos sendo ao menos um numero e uma letra\.")
+
     $("#form").validate({
         rules: {
             cpf: {
@@ -199,7 +207,7 @@ $(document).ready(function () {
             },
             senha: {
                 required: true,
-                rangelength: [6, 10],
+                strongPassword: true,
             },
             senha2: {
                 required: true,
@@ -281,7 +289,7 @@ $(document).ready(function () {
 })
 
 // validar força da senha 
-$(document).ready(function(){
+/*$(document).ready(function(){
 
     $("#senha").keyup(function() {
 
@@ -306,4 +314,4 @@ $(document).ready(function(){
 
         alert(strength);
     });
- });
+ });*/
