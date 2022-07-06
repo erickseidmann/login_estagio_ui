@@ -29,7 +29,7 @@
                     </a></span>
                 <form class="form" id="form">
 
-                    <div class="row input-goup mt-1 ">
+                    <div class="row input-group mt-1 ">
                         <div class="col-md-6 mb-3">
                             <button id="pjbtn" type="button" class="btn bot-click  btn-info  fw-semibold btn-sm">
                                 Sou Pessoa Juridica*
@@ -37,36 +37,35 @@
                         </div>
                     </div>
 
-                    <div id="pf" class="input-goup mt-1 mb-3 ">
-                        <div class="row input-goup mb-3 fw-semibold ">
-                            <div class="col-md-6 ">
-                                <label>Nome*</label>
-                                <input type="text" class="form-control bg-light  " name="nome" id="nome"
-                                    placeholder="ex: João" />
-                            </div>
-                            <div class="col-md-6 ">
-                                <label>Sobrenome*</label>
-                                <input type="text" class="form-control bg-light " id="sobrenome" name="sobrenome"
-                                    placeholder="ex: fulano de tal" />
-                            </div>
+
+                    <div class="row input-group mb-3 fw-semibold ">
+                        <div class="col-md-6 ">
+                            <label>Nome*</label>
+                            <input type="text" class="form-control bg-light  " name="nome" id="nome"
+                                placeholder="ex: João" />
                         </div>
-                        <div class="row input-goup mb-3 fw-semibold">
-                            <div class="col-md-6 ">
-                                <label>CPF*</label>
-                                <input id="cpf" type="text" name="cpf"
-                                    class="form-control bg-light btn-outline-secondary" autocomplete="off"
-                                    onkeyup="mascara_cpf()" />
-                            </div>
-                            <div class="col-md-6 ">
-                                <label>Email*</label>
-                                <input type="email" id="email" name="email"
-                                    class="form-control bg-light btn-outline-secondary"
-                                    placeholder="ex: meuemail@gmail.com" />
-                            </div>
+                        <div class="col-md-6 ">
+                            <label>Sobrenome*</label>
+                            <input type="text" class="form-control bg-light " id="sobrenome" name="sobrenome"
+                                placeholder="ex: fulano de tal" />
                         </div>
                     </div>
-                    <div id="pj" class="input-goup mb-3 fw-semibold">
-                        <div class="row input-goup mb-3">
+                    <div class="row input-group  mb-3 fw-semibold">
+                        <div class="col-md-6 ">
+                            <label>CPF*</label>
+                            <input id="cpf" type="text" name="cpf" class="form-control bg-light btn-outline-secondary"
+                                autocomplete="off" onkeyup="mascara_cpf()" />
+                        </div>
+                        <div class="col-md-6 ">
+                            <label>Email*</label>
+                            <input type="email" id="email" name="email"
+                                class="form-control bg-light btn-outline-secondary"
+                                placeholder="ex: meuemail@gmail.com" />
+                        </div>
+                    </div>
+
+                    <div id="pj" class="input-group mb-3 fw-semibold">
+                        <div class="row input-group mb-3">
                             <div class="col-md-6 ">
                                 <label>Razão Social*</label>
                                 <input type="text" class="form-control bg-light btn-outline-secondary" />
@@ -83,7 +82,7 @@
                         </div>
                     </div>
 
-                    <div class="row input-goup mb-3 fw-semibold">
+                    <div class="row input-group mb-3 fw-semibold">
                         <div class="col-md-6 ">
                             <label>Senha*</label>
                             <input type="password" id="senha" name="senha"
@@ -95,7 +94,7 @@
                                 class="form-control bg-light outline-secondary" placeholder="*******" />
                         </div>
                     </div>
-                    <div class="row input-goup mb-3 fw-semibold">
+                    <div class="row input-group mb-3 fw-semibold">
                         <div class="col-md-6 ">
                             <label>Data de Nascimento*</label>
                             <input id="data" type="text" name="data" class="form-control bg-light date" />
@@ -127,7 +126,7 @@
 
                     <!-- INFORMAÇÕES SOBRE O ENDEREÇO -->
 
-                    <div class="row input-goup mt-1 mb-3 fw-semibold">
+                    <div class="row input-group mt-1 mb-3 fw-semibold">
                         <div class="col-md-6  ">
                             <label for="cep">CEP*</label>
                             <input type="text" name="cep" class="form-control bg-light outline-secondary" id="cep"
@@ -139,7 +138,7 @@
                                 id="logradouro" placeholder="Logradouro" readonly />
                         </div>
                     </div>
-                    <div class="row input-goup mt-1  mb-3 fw-semibold">
+                    <div class="row input-group mt-1  mb-3 fw-semibold">
                         <div class="col-md-6 ">
                             <label for="cidade">Cidade*</label>
                             <input type="text" name="cidade" class="form-control bg-light outline-secondary" id="cidade"
@@ -180,7 +179,7 @@
                         </div>
                     </div>
 
-                    <div class="row input-goup mt-1 mb-3 fw-semibold">
+                    <div class="row input-group mt-1 mb-3 fw-semibold">
                         <div class="col-md-6 mb-3">
                             <label for="bairro">Bairro*</label>
                             <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro"
@@ -196,13 +195,13 @@
                         <input type="text" name="complemento" class="form-control" id="complemento"
                             placeholder="complemento" />
                     </div>
-                    <div class="form-group input-goup  mb-3 fw-semibold">
+                    <div class="form-group input-group  mb-3 fw-semibold">
                         <label for="opiniao">Deixe sua opinião conosco!</label>
                         <textarea class="form-control" id="opiniao" placeholder="Escreva o que achou da nossa pagina!"
                             rows="3"></textarea>
                     </div>
 
-                    <div class="form-check form-check-inline input-goup mb-4">
+                    <div class="form-check form-check-inline input-group mb-4">
                         <label class="form-check-label fw-semibold col-12  " for="termos">*Li e aceito os <a
                                 href="https://policies.google.com/terms?hl=pt-BR" target="_blank"> termos e condições
                             </a></label>
@@ -210,7 +209,7 @@
 
                     </div>
 
-                    <div class="row btn-goup mb-3 ">
+                    <div class="row btn-group mb-3 ">
                         <div class="container-fluid col">
                             <button id="btncadastrar" name="btncadastrar" type="submit"
                                 class="btn btn-info fw-semibold">
