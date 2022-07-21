@@ -42,16 +42,14 @@ btn.addEventListener('click', function () {
 
 
 /* Obrigatorio CPF, CNPJ , email   */
-const btncadastrar = document.getElementById('btncadastrar')
+const btncadastrar = $('#btncadastrar')
 
 form.addEventListener('submit', (evente) => {
 
-
-    const termos = document.getElementById('termos')
-    const email = document.getElementById('email')
+    const erro = document.getElementById( 'email','nome', 'sobrenome','cpf',);
     const cpf = document.getElementById('cpf')
-    const cnpj = document.getElementById('cnpj')
-    const cep = document.getElementById('cep')
+    const cnpj = document.getElementById('cnpj');
+    const cep = document.getElementById('cep');
     const telefone = document.getElementById('tele')
     const nome = document.getElementById('nome')
     const sobrenome = document.getElementById('sobrenome')
@@ -64,24 +62,17 @@ form.addEventListener('submit', (evente) => {
     const bairro = document.getElementById('bairro')
     const numero = document.getElementById('numero')
 
-
-    if (termos.value == false) {
-        termos.classList.add("is-invalid");
-        termos.focus()
+    if (erro.value == "") {
+        erro.classList.add("is-invalid");
+        erro.focus();
     } else {
-        termos.classList.remove("is-invalid")
-    }
-    if (email.value == "") {
-        email.classList.add("is-invalid");
-        email.focus()
-    } else {
-        email.classList.remove("is-invalid")
+        erro.classList.remove("is-invalid");
     }
     if (data.value == "") {
         data.classList.add("is-invalid");
-        data.focus()
+        data.focus();
     } else {
-        data.classList.remove("is-invalid")
+        data.classList.remove("is-invalid");
     }
     if (senha.value == "") {
         senha.classList.add("is-invalid");
@@ -91,75 +82,75 @@ form.addEventListener('submit', (evente) => {
     }
     if (rsenha.value == "") {
         rsenha.classList.add("is-invalid");
-        rsenha.focus()
+        rsenha.focus();
     } else {
-        rsenha.classList.remove("is-invalid")
+        rsenha.classList.remove("is-invalid");
     }
     if (cpf.value == false) {
         cpf.classList.add("is-invalid");
-        cpf.focus()
+        cpf.focus();
     } else {
-        cpf.classList.remove("is-invalid")
+        cpf.classList.remove("is-invalid");
     }
     if (cep.value == false) {
         cep.classList.add("is-invalid");
-        cep.focus()
+        cep.focus();
     } else {
-        cep.classList.remove("is-invalid")
+        cep.classList.remove("is-invalid");
     }
     if (cnpj.value == false) {
         cnpj.classList.add("is-invalid");
-        cnpj.focus()
+        cnpj.focus();
     } else {
-        cnpj.classList.remove("is-invalid")
+        cnpj.classList.remove("is-invalid");
     }
     if (telefone.value == "") {
         telefone.classList.add("is-invalid");
-        telefone.focus()
+        telefone.focus();
     } else {
-        telefone.classList.remove("is-invalid")
+        telefone.classList.remove("is-invalid");
     }
     if (nome.value == "") {
-        nome.classList.add("is-invalid")
-        nome.focus()
+        nome.classList.add("is-invalid");
+        nome.focus();
     } else {
-        nome.classList.remove("is-invalid")
+        nome.classList.remove("is-invalid");
     }
     if (sobrenome.value == "") {
         sobrenome.classList.add("is-invalid");
-        sobrenome.focus()
+        sobrenome.focus();
     } else {
-        sobrenome.classList.remove("is-invalid")
+        sobrenome.classList.remove("is-invalid");
     }
     if (logradouro.value == "") {
         logradouro.classList.add("is-invalid");
-        logradouro.focus()
+        logradouro.focus();
     } else {
-        logradouro.classList.remove("is-invalid")
+        logradouro.classList.remove("is-invalid");
     }
     if (cidade.value == "") {
         cidade.classList.add("is-invalid");
-        cidade.focus()
+        cidade.focus();
     } else {
-        cidade.classList.remove("is-invalid")
+        cidade.classList.remove("is-invalid");
     }
     if (estado.value == "") {
         estado.classList.add("is-invalid");
         estado.focus()
     } else {
-        estado.classList.remove("is-invalid")
+        estado.classList.remove("is-invalid");
     }
     if (bairro.value == "") {
         bairro.classList.add("is-invalid");
-        bairro.focus()
+        bairro.focus();
     } else {
-        bairro.classList.remove("is-invalid")
+        bairro.classList.remove("is-invalid");
     }
     if (numero.value == "") {
         numero.classList.add("is-invalid");
-        numero.focus()
+        numero.focus();
     } else {
-        numero.classList.remove("is-invalid")
+        numero.classList.remove("is-invalid");
     }
 })
 // mascara cpf, telefone, cnpj e cep usando jquery
